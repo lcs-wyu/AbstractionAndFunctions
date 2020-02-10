@@ -37,6 +37,22 @@ func trianglePerimeter(side1: Double, side2: Double, side3: Double) -> Double {
 
 let perimeter = trianglePerimeter(side1: 2.0, side2: 2.0, side3: 3.0)
 print(perimeter)
+
+func circlePerimeter (radius: Double) -> Double{
+    return Double.pi * radius * 2
+}
+
+let perimeter2 = circlePerimeter(radius: 3)
+print(perimeter2)
+
+
+
+
+
+
+
+
+
 /*:
  [Previous: Writing Documentation](@previous) | Page 7
  */
