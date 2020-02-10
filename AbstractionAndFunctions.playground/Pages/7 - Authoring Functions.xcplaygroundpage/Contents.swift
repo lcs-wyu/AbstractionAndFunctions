@@ -28,7 +28,7 @@ import Foundation
 // Begin your work here...
 func trianglePerimeter(side1: Double, side2: Double, side3: Double) -> Double {
     if side1+side2 > side3 && side3+side2 > side1 && side1+side3 > side2 {
-         return side1+side2+side3
+        return side1+side2+side3
     } else {
         print("These side lengths do not make a triangle")
         return 0
@@ -45,9 +45,12 @@ func circlePerimeter (radius: Double) -> Double{
 let perimeter2 = circlePerimeter(radius: 3)
 print(perimeter2)
 
+func trapezoidArea(upperBottom: Double, bottom: Double, height: Double) -> Double {
+    return (upperBottom+bottom) * height / 2
+}
 
-
-
+let area1 = trapezoidArea(upperBottom: 3.0, bottom: 7.0, height: 4.0)
+print(area1)
 
 
 
