@@ -50,21 +50,32 @@ let trianglePerimeter3 = trianglePerimeter(side1: 8, side2: -9, side3: -9)
 let triangleperimeter4 = trianglePerimeter(side1: 0, side2: 7, side3: 8)
 
 
-func circlePerimeter (radius: Double) -> Double{
+func circlePerimeter (radius: Double) -> Double?{
+    guard radius > 0 else {
+        return nil
+    }
     return Double.pi * radius * 2
 }
 
-
+//Test case 1
 let perimeter2 = circlePerimeter(radius: 3)
-print(perimeter2)
+print(perimeter2!)
 
-func trapezoidArea(upperBottom: Double, bottom: Double, height: Double) -> Double {
+
+func trapezoidArea(upperBottom: Double, bottom: Double, height: Double) -> Double? {
+    guard upperBottom > 0 && bottom > 0 && height > 0 else {
+        return nil
+    }
     return (upperBottom+bottom) * height / 2
 }
-
+//Test case 1
 let area1 = trapezoidArea(upperBottom: 3.0, bottom: 7.0, height: 4.0)
-print(area1)
+print(area1!)
 
+/// A function to find the area of any given parallelogram
+/// - Parameter height: The height of the parallelogram
+/// - Parameter bottom: The bottom of the parllelogram
+/// - Returns: The area of the parallelogram
 func paralleogramArea (height: Double, bottom: Double) -> Double? {
     guard height > 0 && bottom > 0 else {
       return nil
