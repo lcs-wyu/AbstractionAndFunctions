@@ -68,6 +68,11 @@ let circlePerimeter2 = circlePerimeter(radius: -3)
 //Test case 3: Radius is zero
 let circlePerimeter3 = circlePerimeter(radius: 0)
 
+/// A function to find the area of a given trapezoid
+/// - Parameter upperBottom: The upper bottom of the trapezoid
+/// - Parameter bottom: The lower bottom of the trapezoid
+/// - Parameter height: The height of the trapezoid
+/// - Returns: The area of the trapezoid
 func trapezoidArea(upperBottom: Double, bottom: Double, height: Double) -> Double? {
     guard upperBottom > 0 && bottom > 0 && height > 0 else {
         return nil
@@ -113,6 +118,7 @@ let cylinder1 = cylinderSurfaceArea(radius: 2, height: 10)
 let cylinder2 = cylinderSurfaceArea(radius: 2, height: -10)
 //Test case 3: 0 as radius
 let cylinder3 = cylinderSurfaceArea(radius: 0, height: 18)
+
 
 
 
