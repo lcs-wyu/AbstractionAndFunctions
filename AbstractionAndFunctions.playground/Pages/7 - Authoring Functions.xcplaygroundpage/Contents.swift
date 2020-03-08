@@ -58,9 +58,12 @@ func circlePerimeter (radius: Double) -> Double?{
 }
 
 //Test case 1
-let perimeter2 = circlePerimeter(radius: 3)
-print(perimeter2!)
-
+let circlePerimeter1 = circlePerimeter(radius: 3)
+print(circlePerimeter1!)
+//Test case 2: Negative radius
+let circlePerimeter2 = circlePerimeter(radius: -3)
+//Test case 3: Radius is zero
+let circlePerimeter3 = circlePerimeter(radius: 0)
 
 func trapezoidArea(upperBottom: Double, bottom: Double, height: Double) -> Double? {
     guard upperBottom > 0 && bottom > 0 && height > 0 else {
@@ -71,6 +74,13 @@ func trapezoidArea(upperBottom: Double, bottom: Double, height: Double) -> Doubl
 //Test case 1
 let area1 = trapezoidArea(upperBottom: 3.0, bottom: 7.0, height: 4.0)
 print(area1!)
+//Test case 2: Height is 0
+let trapezoidArea2 = trapezoidArea(upperBottom: 9, bottom: 8, height: 0)
+//Test case 3: Negative bottom length and height
+let trapezoidArea3 = trapezoidArea(upperBottom: 2, bottom: -3, height: -8)
+//Test case 4:Negative upper bottom length
+let trapezoidArea4 = trapezoidArea(upperBottom: -4, bottom: 5, height: 6)
+
 
 /// A function to find the area of any given parallelogram
 /// - Parameter height: The height of the parallelogram
