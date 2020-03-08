@@ -50,6 +50,9 @@ let trianglePerimeter3 = trianglePerimeter(side1: 8, side2: -9, side3: -9)
 let triangleperimeter4 = trianglePerimeter(side1: 0, side2: 7, side3: 8)
 
 
+/// A function to calculate the perimeter of a circle
+/// - Parameter radius: The radius of the circle
+/// - Returns: The perimeter of the circle
 func circlePerimeter (radius: Double) -> Double?{
     guard radius > 0 else {
         return nil
@@ -92,6 +95,25 @@ func paralleogramArea (height: Double, bottom: Double) -> Double? {
     }
       return height * bottom
 }
+
+/// A finction to find the surface area of a given cylinder
+/// - Parameter radius: The radius of the cylinder's bottom
+/// - Parameter height: The height of the cylinder
+/// - Returns: The surface area of the cylinder
+func cylinderSurfaceArea (radius:Double, height:Double) -> Double?{
+    guard radius > 0 && height > 0 else {
+        return nil
+    }
+    return Double.pi * pow(radius, 2) + Double.pi * height * radius
+}
+
+//Test case 1:
+let cylinder1 = cylinderSurfaceArea(radius: 2, height: 10)
+//Test case 2: Negative height
+let cylinder2 = cylinderSurfaceArea(radius: 2, height: -10)
+//Test case 3: 0 as radius
+let cylinder3 = cylinderSurfaceArea(radius: 0, height: 18)
+
 
 
 /*:
