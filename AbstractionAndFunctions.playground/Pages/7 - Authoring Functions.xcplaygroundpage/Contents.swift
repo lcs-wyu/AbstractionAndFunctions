@@ -119,12 +119,28 @@ let cylinder2 = cylinderSurfaceArea(radius: 2, height: -10)
 //Test case 3: 0 as radius
 let cylinder3 = cylinderSurfaceArea(radius: 0, height: 18)
 
+/// A function to find the surface area of a given rectangular prism.
+/// - Parameter width: The width of the rectangular prism.
+/// - Parameter length: The length of the rectangular prism.
+/// - Parameter height: The height of the rectangular prism.
 func rectangularPrismSurfaceArea(width: Double, length: Double, height: Double) -> Double? {
     guard height > 0 && length > 0 && width > 0 else {
         return nil
     }
     return height * width * 2 + width * length * 2 + height * length * 2
 }
+//Test case 1: Cube with side length 2, surface area 24
+let cube1 = rectangularPrismSurfaceArea(width: 2, length: 2, height: 2)
+//Test case 2: Rectangular prism
+let rectangularPrism1 = rectangularPrismSurfaceArea(width: 3, length: 4, height: 5)
+//Test case 3: Negative inputs
+let rectangularPrism2 = rectangularPrismSurfaceArea(width: -1, length: 3, height: -2)
+//Test case 4: Zero as input
+let rectangularPrism3 = rectangularPrismSurfaceArea(width: 0, length: 0, height: 3)
+
+
+
+
 
 
 /*:
