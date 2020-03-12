@@ -119,7 +119,12 @@ let cylinder2 = cylinderSurfaceArea(radius: 2, height: -10)
 //Test case 3: 0 as radius
 let cylinder3 = cylinderSurfaceArea(radius: 0, height: 18)
 
-
+func rectangularPrismSurfaceArea(width: Double, length: Double, height: Double) -> Double? {
+    guard height > 0 && length > 0 && width > 0 else {
+        return nil
+    }
+    return height * width * 2 + width * length * 2 + height * length * 2
+}
 
 
 /*:
