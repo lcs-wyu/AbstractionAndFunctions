@@ -138,10 +138,21 @@ let rectangularPrism2 = rectangularPrismSurfaceArea(width: -1, length: 3, height
 //Test case 4: Zero as input
 let rectangularPrism3 = rectangularPrismSurfaceArea(width: 0, length: 0, height: 3)
 
+/// A function to calculate the volume of a given sphere.
+/// - Parameter radius: The radius of the sphere.
+func sphereVolume (radius: Double) -> Double? {
+    guard radius > 0 else {
+        return nil
+    }
+    return 4/3 * Double.pi * pow(radius, 3)
+}
 
-
-
-
+//Test case 1: Sphere with radius 3, should have volume 36π or about 113.09
+let sphere1 = sphereVolume(radius: 3)
+//Test case 2: With negative radius
+let sphere2 = sphereVolume(radius: -3)
+//Test case 3: With 0 as radius
+let sphere3 = sphereVolume(radius: 0)
 
 /*:
  [Previous: Writing Documentation](@previous) | Page 7
