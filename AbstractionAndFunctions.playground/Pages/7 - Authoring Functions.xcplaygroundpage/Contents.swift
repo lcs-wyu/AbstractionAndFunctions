@@ -149,10 +149,35 @@ func sphereVolume (radius: Double) -> Double? {
 
 //Test case 1: Sphere with radius 3, should have volume 36π or about 113.09
 let sphere1 = sphereVolume(radius: 3)
-//Test case 2: With negative radius
-let sphere2 = sphereVolume(radius: -3)
-//Test case 3: With 0 as radius
-let sphere3 = sphereVolume(radius: 0)
+//Test case 2: Sphere with radius 2.5
+let sphere2 = sphereVolume(radius: 2.5)
+//Test case 3: With negative radius
+let sphere3 = sphereVolume(radius: -3)
+//Test case 4: With 0 as radius
+let sphere4 = sphereVolume(radius: 0)
+
+/// A function to find the volume of a cone.
+/// - Parameter radius: The radius of the cone.
+/// - Parameter height: The height of the cone.
+func coneVolume (radius: Double, height: Double) -> Double?{
+    guard radius > 0 && height > 0 else {
+        return nil
+    }
+    return 1/3 * Double.pi * pow(radius, 2) * height
+}
+
+//Test case 1
+let cone1 = coneVolume(radius: 5, height: 10)
+//Test case 2
+let cone2 = coneVolume(radius: 0, height: 2)
+//Teat case 3
+let cone3 = coneVolume(radius: 2, height: -4)
+
+
+
+
+
+
 
 /*:
  [Previous: Writing Documentation](@previous) | Page 7
